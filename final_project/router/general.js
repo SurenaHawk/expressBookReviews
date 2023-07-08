@@ -36,7 +36,7 @@ public_users.get('/', async function (req, res) {
 //     const isbn = req.params.isbn
 //     res.send(books[isbn])
 // });
-  
+
 public_users.get('/isbn/:isbn', function (req, res) {
     const isbn = req.params.isbn
     getBookDetails(isbn).then((bookDetails) => {
@@ -123,12 +123,6 @@ function getBookDetailsByAuthor(author){
         }, 1000);
     });
 }
-
-console.log("Before calling promise");
-
-console.log("After calling promise");
-
-
 
 //  Get book review
 public_users.get('/review/:isbn',function (req, res) {
